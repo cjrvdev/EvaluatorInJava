@@ -1,4 +1,5 @@
-import TreeElements.Expression;
+import TreeElements.Addition;
+import TreeElements.Constant;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -21,7 +22,7 @@ public class AcceptedEvaluator {
     @Test
     public void should_evaluate_adding_expression() throws Exception {
         Evaluator evaluator = new Evaluator();
-        assertEquals(7, evaluator.evaluate(new Expression('+', new Expression(4), new Expression(3))));
+        assertEquals(7, evaluator.evaluate(new Addition(new Constant(4), new Constant(3))));
 
     }
 }
